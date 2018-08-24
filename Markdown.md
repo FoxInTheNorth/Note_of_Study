@@ -30,16 +30,16 @@ import numpy as np
 np.arrary(b)
 ```
 |name    |age    |nation   |
-|--------|-------|---------|
+|--------|------------|---------|
 |jack    |15     |China    |
 |rose    |17     |Japan    |
 
 |name    |age    |nation   |
-|-------:|-------|---------|
+|-------:|------------|---------|
 |jack    |15     |China    |
 |rose    |17     |Japan    |
 
 |name    |age    |nation   |
-|--------|:-----:|---------|
+|--------|:----------:|---------|
 |jack    |15     |China    |
 |rose    |17     |Japan    |
