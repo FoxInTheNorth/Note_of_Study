@@ -15,8 +15,7 @@
 2. 第二行
 
 # 链接与图片
-'[baidu](http://www.baidu.com)'
 [baidu](http://www.baidu.com)
-
+![](https://avatars1.githubusercontent.com/u/32262115?s=40&v=4)
 
 >大于号
