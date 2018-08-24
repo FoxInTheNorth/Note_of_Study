@@ -1,24 +1,16 @@
 ##### Numpy内部解除了Python的PIL(全局解释器锁),运算效率极好
-list转化为array
-```
-import numnpy as np  
-a = [1,2,3]  
-b = np.array(a)  
-```
-数组元素个数
-`b.size`   
 
-数组形状
-`b.shape`   
+`a = np.array([1,2,3])` list转化为array  
 
-数组元素类型
-`b.ndim`        
+`b.size`   数组元素个数
 
-创建10行10列的数值为浮点1的矩阵
-`arrary_one = np.ones([10.10])`  
+`b.shape`  数组形状 
 
-创建10行10列的数值为浮点0的矩阵
-`arrary_zero = np.zeros([10.10])`  
+`b.ndim`   数组元素类型      
+
+`arrary_one = np.ones([10.10])`  创建10行10列的数值为浮点1的矩阵 
+
+`arrary_zero = np.zeros([10.10])`  创建10行10列的数值为浮点0的矩阵
 
 
 ##### 从现有的数据创建数组
