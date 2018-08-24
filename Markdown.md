@@ -1,4 +1,3 @@
-# #号的使用
 # 一个#看看
 ## 两个#看看
 ### 三个#看看
@@ -24,6 +23,9 @@
 
 **大于号 一盏灯， 一片昏黄； 一简书， 一杯淡茶**
 
-'''
-print 'hello world'
-'''
+`print 'hello world'`
+
+```
+import numpy as np
+np.arrary(b)
+```
