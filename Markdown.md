@@ -14,5 +14,9 @@
 1. 第一行
 2. 第二行
 
+# 链接与图片
+'[baidu](http://www.baidu.com)'
+[baidu](http://www.baidu.com)
+
 
 >大于号
