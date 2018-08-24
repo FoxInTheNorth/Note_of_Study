@@ -23,9 +23,12 @@ b = np.array(a)
 
 ##### 从现有的数据创建数组
 `array`      深拷贝
+
 `asarray`    浅拷贝
 
 ##### Numpy创建随机数组——均匀分布
 `np.random.rand(10.10)`            创建指定形状的数组(范围在0至1之间)
+
 `np.random.uniform(0.100)`          创建指定范围内的一个数
+
 `np.random.randint(0.100)`          创建指定范围内的一个整数
