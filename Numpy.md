@@ -1,8 +1,8 @@
-#Numpy内部解除了Python的PIL(全局解释器锁),运算效率极好
-
+##### Numpy内部解除了Python的PIL(全局解释器锁),运算效率极好
+`
 import numnpy as np
 a = [1,2,3]
-b = np.array(a)             #list转化为array
+b = np.array(a)   `         ####### list转化为array
 
 b.size                      #数组元素个数
 
