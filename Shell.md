@@ -1,4 +1,4 @@
-*****术语名词
+***** 术语名词
 IDC（Internet Data Center)互联网数据中心
 ISP--(Internet Service Provider)互联网服务提供商
 ICP--(Internet Content Provider)互联网内容提供商。ICP证成为网站经营的许可证，经营性网站必须办理ICP证
