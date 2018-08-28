@@ -1,1 +1,1 @@
-# Note_of_Study
+# This is a notebook of my study of python
