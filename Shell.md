@@ -1,8 +1,8 @@
 ##### 术语名词
 
-IDC（Internet Data Center)互联网数据中心
-ISP--(Internet Service Provider)互联网服务提供商
-ICP--(Internet Content Provider)互联网内容提供商。ICP证成为网站经营的许可证，经营性网站必须办理ICP证
+IDC（Internet Data Center)互联网数据中心  
+ISP--(Internet Service Provider)互联网服务提供商  
+ICP--(Internet Content Provider)互联网内容提供商。ICP证成为网站经营的许可证，经营性网站必须办理ICP证   
 CDN--(Content Delivery Network)内容分发网络。CDN的关键技术主要有内容存储和分发技术
 LVS--(Linux Virtual Server)Linux虚拟服务器。LVS集群采用IP负载均衡技术和基于内容请求分发技术
 CGI--(Common Gateway Interface)通用网关接口
