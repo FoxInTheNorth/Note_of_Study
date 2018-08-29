@@ -41,8 +41,8 @@ chmod +x ./test.sh   #使脚本具有执行权限
 
 ##### Shell变量
 定义变量  
-`your_name='jack'
-`
+```your_name='jack'
+```
 
 
 
