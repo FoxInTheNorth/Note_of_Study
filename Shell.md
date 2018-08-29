@@ -19,4 +19,9 @@ Linux 的 Shell 种类众多，常见的有：
 - C Shell（/usr/bin/csh）   
 - K Shell（/usr/bin/ksh）   
 - Shell for Root（/sbin/sh）   
+
+```
+#!/bin/bash
+echo "hello world"
+```
  
