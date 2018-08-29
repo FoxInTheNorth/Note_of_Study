@@ -1,4 +1,4 @@
-#### 术语名词    
+### 术语名词    
 IDC（Internet Data Center)互联网数据中心  
 ISP--(Internet Service Provider)互联网服务提供商   
 ICP--(Internet Content Provider)互联网内容提供商。ICP证成为网站经营的许可证，经营性网站必须办理ICP证   
@@ -9,7 +9,7 @@ GSLB--(Global Server Load Balance）全局负载均衡。 CDN 系统架构中最
 BOSS--(Business & Operation Support System，BOSS)是业务运营支撑系统。四个部分：计费及结算系统、营业与账务系统、客户服务系统和决策支持系统  
 
 
-#### Shell   
+### Shell学习   
 Shell 脚本：shell script   
 要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器 
 
@@ -30,17 +30,18 @@ echo "hello world"
 方法1：
 ```
 chmod +x ./test.sh   #使脚本具有执行权限
-./test.sh   #执行脚本
+./test.sh            #执行脚本
 ```
 执行脚本：linux会先去PATH里面找test.sh 是找不到的，所以用./告诉系统在当前目录里寻找,然后根据脚本开头的注释#! 寻找解释器/bin/bash，而/bin默认在PATH里，所以运行bash的时候，可以直接/bin/sh
 
 方法2：   
 ```
-/bin/sh test.sh          #运行解释器，把脚本文件作为参数传入
+/bin/sh test.sh      #运行解释器，把脚本文件作为参数传入
 ```
 
-
-
+##### Shell变量
+定义变量
+`your_name='jack'`
 
 
 
