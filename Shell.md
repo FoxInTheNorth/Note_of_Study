@@ -19,14 +19,30 @@ Linux 的 Shell 种类众多，常见的有：
 - C Shell（/usr/bin/csh）   
 - K Shell（/usr/bin/ksh）   
 - Shell for Root（/sbin/sh）   
+#!/bin/sh，它同样也可以改为 #!/bin/bash因为人们并不去区分他们   
 
-##### 第一个Shell脚本 
+##### 编辑第一个Shell脚本 
 ```
 #!/bin/bash
 echo "hello world"
 ```
-##### 添加可执行权限
+##### 运行脚本
+方法1：
 ```
 chmod +x ./test.sh   #使脚本具有执行权限
 ./test.sh   #执行脚本
 ```
+执行脚本：linux会先去PATH里面找test.sh 是找不到的，所以用./告诉系统在当前目录里寻找，而/bin默认在PATH里，所以运行bash的时候，可以直接/bin/sh
+
+方法2：
+`/bin/sh    #运行解释器，把脚本文件作为参数传入`
+
+
+
+
+
+
+
+
+
+
