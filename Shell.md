@@ -20,6 +20,7 @@ Linux 的 Shell 种类众多，常见的有：
 - K Shell（/usr/bin/ksh）   
 - Shell for Root（/sbin/sh）   
 
+##### 第一个Shell脚本 
 ```
 #!/bin/bash
 echo "hello world"
