@@ -12,7 +12,7 @@ BOSS--(Business & Operation Support System，BOSS)是业务运营支撑系统。
 
 ##### Shell
 
-Shell 脚本：shell script 
+Shell 脚本：shell script   
 要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器 
 
 Linux 的 Shell 种类众多，常见的有：   
