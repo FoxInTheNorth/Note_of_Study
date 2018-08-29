@@ -44,7 +44,7 @@ chmod +x ./test.sh   #使脚本具有执行权限
 ```
 your_name='jack'
 ```
-
+变量名和等号之间不能有空格
 
 
 
