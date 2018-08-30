@@ -51,7 +51,11 @@ your_name='jack'
 for file in `ls / etc`
 或
 for file in $(ls /etc)
-
 ```
 
-
+使用变量用$
+```
+your_name="qinjx"
+echo $your_name
+echo ${your_name}         #{}是为了更好的识别变量的边界，没有歧义的情况下，可以不加
+```
