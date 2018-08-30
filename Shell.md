@@ -53,9 +53,17 @@ for file in `ls / etc`
 for file in $(ls /etc)
 ```
 
-使用变量用$
+使用变量用$，赋值不需要加$
 ```
 your_name="qinjx"
 echo $your_name
 echo ${your_name}         #{}是为了更好的识别变量的边界，没有歧义的情况下，可以不加
+```
+
+只读变量readonly
+```
+#!/bin/bash
+my_name="Wong"
+readonly my_name          #转变为只读变量
+my_name="lee"             #报错
 ```
