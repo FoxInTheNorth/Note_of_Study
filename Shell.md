@@ -83,3 +83,23 @@ str='this is string'
 单引号与双引号的区别
 - 引号:''不支持插入变量，不支持转义
 - 引号:""支持插入变量，支持转义
+
+拼接字符串
+```
+greeting="hello, "$your_name" !"
+greeting='hello, '$your_name' !'               #等同于'hello, ' + '$your_name + ' !'
+greeting_1="hello, ${your_name} !"             #${your_name}识别为变量
+greeting_3='hello, ${your_name} !'             #${your_name}不被识别，当作字符串
+```
+获取字符串长度
+```
+echo ${your_name}
+echo ${#your_name}      #输出字符串长度
+```
+
+获取字符串皮那段（切片）
+```
+echo ${your_name:1:4}
+```
+
+查找子字符串
