@@ -46,8 +46,12 @@ your_name='jack'
 ```
 变量名和等号之间不能有空格
 
+也可以这样赋值
+```
+for file in `ls / etc`
+或
+for file in $(ls /etc)
 
-
-
+```
 
 
