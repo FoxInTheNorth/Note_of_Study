@@ -74,7 +74,6 @@ unset my_name             #不能删除readonly变量
 变量类型 
 - 局部变量
 - 环境变量
-- Shell变量
 
 ##### Shell 字符串
 ```
@@ -102,4 +101,63 @@ echo ${#your_name}      #输出字符串长度
 echo ${your_name:1:4}
 ```
 
-查找子字符串
+查找子字符串序号
+```
+echo `expr index "$string" ho`            #不是单引号，注意ho，表示两个查询，谁先查到就输出谁
+```
+
+##### Shell 数组
+```
+array_name=(value0 value1 value2 value3)        #用空格分割数组的各元素
+```
+或者格式变一下
+```
+array_name=(
+value0
+value1
+value2
+value3
+)
+```
+赋值操作
+```
+array_name[0]=value0
+array_name[1]=value1
+array_name[n]=valuen          #用下标赋值
+```
+
+读取数组
+```
+a=${arry_name[0]}             #这里用{}防止误认为$arry_name ，使用变量一定要$,被赋值的变量不需要
+echo ${array_name[@]}         #用@表示全部元素
+```
+获取数组的长度
+```
+length=${#array_name[@]}      #获取数组的长度
+length=${#array_name[*]}      #等效上一个
+lengthn=${#array_name[n]}     #获取单个元素的长度
+```
+
+##### Shell注释  
+sh里没有多行注释，只能每一行加一个#号
+
+多行注释
+```
+${array_name[0]=value0
+array_name[1]=value1
+array_name[n]=valuen}              #用一对花括号括起来，定义成一个函数,不调用它就等于注释了
+                    
+```
+```
+:<<EOF                      #第一种
+注释内容...
+EOF
+
+:<<'                        #第二种
+..
+'
+
+:<<!                        #第三种
+...
+!
+```
