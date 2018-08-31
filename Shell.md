@@ -161,3 +161,17 @@ EOF
 注释内容...
 !
 ```
+
+##### Shell 传递参数
+脚本内部
+```
+#!/bin/bash
+echo "$0"                 #打印本shell脚本名称'./test.sh'
+echo "$1"                 #打运行时传入的第一个参数     haha
+echo "$2"                 #打运行时传入的第二个参数     xixi
+echo "$3"                 #打运行时传入的第三个参数     dada
+```
+运行时传参
+```
+./test.sh haha xixi dada
+```
