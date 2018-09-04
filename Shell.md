@@ -264,3 +264,14 @@ echo hello          #可以省略引号
 echo "\"It is a test\""    #双引号支持转义
 ```
 
+read 命令从标准输入中读取一行,并把输入行的每个字段的值指定给 shell 变量
+```
+#!/bin/sh
+read name
+echo "$name It is a test"
+```
+运行上面这个shell脚本`./test.sh`   或者`/bin/sh test.sh`
+```
+OK                     #标准输入
+OK It is a test        #输出
+```
