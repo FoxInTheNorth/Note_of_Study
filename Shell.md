@@ -8,7 +8,6 @@ CGI--(Common Gateway Interface)通用网关接口
 GSLB--(Global Server Load Balance）全局负载均衡。 CDN 系统架构中最核心的部分，基于DNS的GSLB正是在返回DNS解析结果的过程中进行智能决策，给用户返回一个最佳的服务IP  
 BOSS--(Business & Operation Support System，BOSS)是业务运营支撑系统。四个部分：计费及结算系统、营业与账务系统、客户服务系统和决策支持系统  
 
-
 ### Shell学习   
 Shell 脚本：shell script   
 要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器 
@@ -233,10 +232,35 @@ echo "两数之和为 : $val"
 ```
 [ $a = $b ]
 [ $a != $b ]
-[ -z $a ]
-[ -n $a ]
-[ $a ]
+[ -z $a ]     #长度为0
+[ -n $a ]     #长度不为0
+[ $a ]        #值不为空
+```
+**文件测试运算符**
+文件测试运算符用于检测 Unix 文件的各种属性
+```
+file="/var/test/test.sh"     #把文件路径赋值给file变量
+[ -b $file ]    #是块设备文
+[ -c $file ]    #是字符设备文件
+[ -d $file ]    #是目录
+[ -f $file ]    #是普通文件（既不是目录，也不是设备文件）
+[ -g $file ]    #设置了 SGID 位
+[ -k $file ]    #设置了粘着位(Sticky Bit)
+[ -p $file ]    #是有名管道
+[ -u $file ]    #设置了 SUID 位
+[ -r $file ]    #可读
+[ -w $file ]    #可写
+[ -x $file ]    #可执行
+[ -s $file ]    #为空（文件大小是否大于0）
+[ -e $file ]    #文件（包括目录）是否存在
 ```
 
+##### Shell echo命令
 
+```
+echo 'hello'        #显示普通字符串
+echo "hello"
+echo hello          #可以省略引号
+echo "\"It is a test\""    #双引号支持转义
+```
 
