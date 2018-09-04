@@ -293,4 +293,3 @@ echo "It is a test" > myfile
 ```
 echo `date`            #显示出date的执行结果
 ```
-
