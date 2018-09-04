@@ -275,3 +275,22 @@ echo "$name It is a test"
 OK                     #标准输入
 OK It is a test        #输出
 ```
+强制换行
+```
+echo -e "hello \n"     #-e开启转义    但是\"好像可以自动转义？
+echo "world"           #两行之间多一行
+```
+强制同行
+```
+echo -e "hello \c"     #-e开启转义   
+echo "world"           #两行之间在一行
+```
+结果定向至文件
+```
+echo "It is a test" > myfile
+```
+显示命令执行结果
+```
+echo `date`            #显示出date的执行结果
+```
+
