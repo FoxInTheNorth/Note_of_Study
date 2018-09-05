@@ -277,9 +277,9 @@ read实例
 ```
 read -p "请输入一段文字:" -n 6 -t 5 -s password
 echo -e "\npassword is $password"
-运行
+运行：
 $ sh test.sh 
-结果
+结果：
 请输入一段文字:
 password is asdfgh
 ```
@@ -312,4 +312,27 @@ echo "It is a test" > myfile
 显示命令执行结果
 ```
 echo `date`            #显示出date的执行结果
+```
+
+##### Shell printf 命令
+printf  format-string  [arguments...]
+printf与shell
+```
+$ echo "Hello, Shell"               #自动换行
+Hello, Shell
+$ printf "Hello, Shell\n"           #手动换行
+Hello, Shell
+$
+```
+printf格式化输出
+```
+printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg  
+printf "%-10s %-8s %-4.2f\n" 郭靖 男 66.1234 
+printf "%-10s %-8s %-4.2f\n" 杨过 男 48.6543 
+printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876
+结果：
+姓名     性别   体重kg
+郭靖     男      66.12
+杨过     男      48.65
+郭芙     女      47.99
 ```
