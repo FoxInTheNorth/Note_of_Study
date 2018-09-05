@@ -266,6 +266,26 @@ echo "\"It is a test\""    #双引号支持转义
 
 read 命令从标准输入中读取一行,并把输入行的每个字段的值指定给 shell 变量
 ```
+read Str1 Str2                             #read可以读取多个参数
+echo "第一个参数:$Str1; 第二个参数:$Str2"
+```
+上面这个脚本运行
+```
+./test.sh a b c d      #参数多给，多的会给最后一个变量Str2：b c d 
+```
+read实例
+```
+read -p "请输入一段文字:" -n 6 -t 5 -s password
+echo -e "\npassword is $password"
+运行
+$ sh test.sh 
+结果
+请输入一段文字:
+password is asdfgh
+```
+
+read 命令与shell 变量
+```
 #!/bin/sh
 read name
 echo "$name It is a test"
