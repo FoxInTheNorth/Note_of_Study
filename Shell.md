@@ -372,5 +372,49 @@ printf "\\"   #\
 printf "ddd"   #1到3位数八进制值的字符。仅在格式字符串中有效
 printf "0ddd"   #1到3位数八进制值的字符
 ```
+##### Shell test 命令
+**数值测试**
+-eq -ne -gt -ge -lt -le
+```
+num1=100
+num2=100
+if test $[num1] -eq $[num2]         #[]执行基本的算数运算
+then
+    echo '两个数相等！'
+else
+    echo '两个数不相等！'
+fi
+```
+[]的使用
+```
+#!/bin/bash
 
+a=5
+b=6
 
+result=$[a+b]                  # 注意等号两边不能有空格
+echo "result 为： $result"
+```
+**字符串测试**
+=  !=	 -z  -n
+```
+num1="ru1noob"
+num2="runoob"
+if test $num1 = $num2            #字符串不用[]号
+then
+    echo '两个字符串相等!'
+else
+    echo '两个字符串不相等!'
+fi
+```
+**文件测试**
+-e -r -w -x -s -d -f -c -b 
+``` 
+cd /bin                  #进入目录
+if test -e ./bash        #指定文件
+then
+    echo '文件已存在!'
+else
+    echo '文件不存在!'
+fi
+```
