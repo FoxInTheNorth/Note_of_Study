@@ -350,3 +350,27 @@ printf "%s and %d \n"   #缺参数的情况，%s对应NULL，%d对应0
  and 0
 ```
 %s %c %d %f都是格式替代符，%c会截取str的第一个字符，比如"abc"，变成"a"
+**printf的转义序列**
+```
+printf "\a "  #警告
+$ printf "www.runoob.com \a"
+结果：www.runoob.com $ 
+
+printf "\b "  #后退，%b格式指示符控制下的参数字符串中有效
+$ printf "a string, no processing:<%b>\n" "A\nB"
+结果：
+a string, no processing:<A
+B>
+
+printf "\c "  #不显示换行符，除非%b中的
+printf "\f "  #换页
+printf "\n "  #换行
+printf "\r "  #回车
+printf "\t"   #水平制表符
+printf "\v"   #垂直制表符
+printf "\\"   #\
+printf "ddd"   #1到3位数八进制值的字符。仅在格式字符串中有效
+printf "0ddd"   #1到3位数八进制值的字符
+```
+
+
