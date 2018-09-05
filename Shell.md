@@ -315,7 +315,6 @@ echo `date`            #显示出date的执行结果
 ```
 
 ##### Shell printf 命令
-printf  format-string  [arguments...]
 printf与shell
 ```
 $ echo "Hello, Shell"               #自动换行
@@ -326,8 +325,8 @@ $
 ```
 printf格式化输出
 ```
-printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg  
-printf "%-10s %-8s %-4.2f\n" 郭靖 男 66.1234 
+printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg            #-表示左对齐，没有则表示右对齐
+printf "%-10s %-8s %-4.2f\n" 郭靖 男 66.1234        
 printf "%-10s %-8s %-4.2f\n" 杨过 男 48.6543 
 printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876
 结果：
@@ -335,4 +334,18 @@ printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876
 郭靖     男      66.12
 杨过     男      48.65
 郭芙     女      47.99
+```
+更多案例
+```
+printf "%d %s\n" 1 "abc"
+printf '%d %s\n' 1 "abc"      #效果同上
+printf %s abcdef              #没有引号也可以
+printf %s abc def             #格式对多个传参起作用
+printf "%s\n" abc def
+printf "%s %s %s\n" a b c d e f g h i j
+```
+```
+printf "%s and %d \n"   #缺参数的情况，%s对应NULL，%d对应0
+结果：
+ and 0
 ```
