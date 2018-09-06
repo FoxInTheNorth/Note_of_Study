@@ -470,6 +470,13 @@ done
 ```
 for var in item1 item2 ... itemN; do command1; command2… done;
 ```
+for循环的简写
+```
+#!/bin/bash
+for((i=1;i<=5;i++));do                 #shell 变量调用需要加 $,但是 for 的 (()) 中不需要
+    echo "这是第 $i 次调用";
+done;
+```
 **while**
 ```
 while condition
@@ -531,7 +538,7 @@ case 值 in
 模式1)
     command1
     command2
-    ...
+    ...                     #每个case分支用右圆括号，用两个分号表示break
     commandN
     ;;
 模式2）
