@@ -599,3 +599,16 @@ do
     esac
 done
 ```
+
+##### Shell 函数
+```
+[ function ] funname [()]
+
+{
+
+    action;
+
+    [return int;]
+
+}
+```
