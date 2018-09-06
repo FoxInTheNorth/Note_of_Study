@@ -470,3 +470,34 @@ done
 ```
 for var in item1 item2 ... itemN; do command1; command2… done;
 ```
+while
+```
+while condition
+do
+    command
+done
+```
+while的运用
+```
+#!/bin/bash
+int=1
+while(( $int<=5 ))
+do
+    echo $int
+    let "int++"         #Bash let 命令，它用于执行一个或多个表达式，变量计算中不需要加上 $ 来表示变量
+done
+```
+无限循环
+```
+while :
+do
+    command
+done
+```
+或者
+```
+while true
+do
+    command
+done
+```
