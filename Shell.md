@@ -430,7 +430,7 @@ else
 fi
 ```
 ##### Shell 流程控制
-if
+**if**
 ```
 if condition
 then
@@ -456,7 +456,7 @@ else
     commandN
 fi
 ```
-for
+**for**
 ```
 for var in item1 item2 ... itemN
 do
@@ -470,7 +470,7 @@ done
 ```
 for var in item1 item2 ... itemN; do command1; command2… done;
 ```
-while
+**while**
 ```
 while condition
 do
@@ -504,4 +504,24 @@ done
 或者
 ```
 for (( ; ; ))
+```
+**until**
+一般 while 循环优于 until 循环
+```
+until condition
+do
+    command
+done
+```
+until运用
+```
+#!/bin/bash
+
+a=0
+
+until [ ! $a -lt 10 ]           #运算顺序！与-lt？
+do 
+   echo $a
+   a=`expr $a + 1`
+done
 ```
