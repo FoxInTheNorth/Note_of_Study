@@ -429,3 +429,30 @@ else
     echo '两个文件都不存在'
 fi
 ```
+##### Shell 流程控制
+if
+```
+if condition
+then
+    command1 
+    command2
+    ...
+    commandN 
+fi
+```
+写成一行
+```
+if [ $(ps -ef | grep -c "ssh") -gt 1 ]; then echo "true"; fi
+```
+if-elseif-else
+```
+if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+```
