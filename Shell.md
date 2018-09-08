@@ -708,7 +708,7 @@ Here Document 是 Shell 中的一种特殊的重定向方式，用来将输入�
 ```
 command << delimiter     #开始的delimiter前后的空格会被忽略掉。
     document
-delimiter                #结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。                 
+delimiter                #结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。      
 ```
 它的作用是将两个 delimiter 之间的内容(document) 作为输入传递给 command。
 ```
@@ -717,5 +717,23 @@ $ wc -l << EOF              #这是在交互界面
     菜鸟教程
     www.runoob.com
 EOF
+
 3          # 输出结果为 3 行
+```
+将其写在脚本中,运行
+```
+#!/bin/bash
+
+cat << EOF           #如果不调用cat，结果不会在脚本文件外显示，为什么？？？     
+欢迎来到
+菜鸟教程
+www.runoob.com
+EOF
+```
+**/dev/null 文件**
+如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null    
+/dev/null 是一个特殊的文件，写入到它的内容都会被丢弃；如果尝试从该文件读取内容，那么什么也读不到。但是 /dev/null 文件非常有用，将命令的输出重定向到它，会起到"禁止输出"的效果
+如果希望屏蔽 stdout 和 stderr，可以这样写：
+```
+$ command > /dev/null 2>&1    #将空内容输出到两端，等于屏蔽
 ```
