@@ -655,3 +655,15 @@ funWithParam(){
 funWithParam 1 2 3 4 5 6 7 8 9 34 73
 ```
 ##### Shell 输入/输出重定向
+一个命令通常从一个叫标准输入的地方读取输入，默认情况下，这恰好是你的终端。同样，一个命令通常将其输出写入到标准输出，默认情况下，这也是你的终端  
+文件描述符 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）
+```
+command > file
+command < file
+command >> file
+n > file	        #将文件描述符为 n 的文件重定向到 file。
+n >> file	        #将文件描述符为 n 的文件以追加的方式重定向到 file。
+n >& m	          #将输出文件 m 和 n 合并
+n <& m	          #将输入文件 m 和 n 合并
+<< tag	          #将开始标记 tag 和结束标记 tag 之间的内容作为输入
+```
