@@ -706,9 +706,8 @@ $ command >> file 2>&1
 **Here Document**
 Here Document 是 Shell 中的一种特殊的重定向方式，用来将输入重定向到一个交互式 Shell 脚本或程序
 ```
-command << delimiter
+command << delimiter     #开始的delimiter前后的空格会被忽略掉。
     document
-delimiter            #结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。
-                     #开始的delimiter前后的空格会被忽略掉。
+delimiter                #结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。                 
 ```
 它的作用是将两个 delimiter 之间的内容(document) 作为输入传递给 command。
