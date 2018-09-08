@@ -711,3 +711,11 @@ command << delimiter     #开始的delimiter前后的空格会被忽略掉。
 delimiter                #结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。                 
 ```
 它的作用是将两个 delimiter 之间的内容(document) 作为输入传递给 command。
+```
+$ wc -l << EOF              #这是在交互界面
+    欢迎来到
+    菜鸟教程
+    www.runoob.com
+EOF
+3          # 输出结果为 3 行
+```
