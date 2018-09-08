@@ -602,13 +602,21 @@ done
 
 ##### Shell 函数
 ```
-[ function ] funname [()]
-
+[ function ] funname [()]                #可以带function fun() 定义，也可以直接fun() 定义,不带任何参数
 {
-
     action;
-
     [return int;]
 
 }
+```
+案例
+```
+#!/bin/bash
+
+demoFun(){                                
+    echo "这是我的第一个 shell 函数!"
+}
+echo "-----函数开始执行-----"
+demoFun                                  #用函数名直接调用函数
+echo "-----函数执行完毕-----"
 ```
