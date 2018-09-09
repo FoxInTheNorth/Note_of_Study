@@ -752,3 +752,25 @@ find /etc -name .bashrc > list 2>&1
 find /etc -name .bashrc 2>&1 > list
 ```
  第二个命令先将要输出到2的内容重定向到1，此时会产生一个1（stdout）的拷贝，作为程序的2(stderr)，而程序原本要输出到1的内容，依然是对接在1原身上的，因此第二步重定向1，对1的拷贝不产生任何影响
+
+##### Shell 文件包含
+包含外部脚本。这样可以很方便的封装一些公用的代码作为一个独立的文件，被包含的文件 test1.sh 不需要可执行权限
+```
+. filename   # 注意点号(.)和文件名中间有一空格
+或
+source filename
+```
+实例
+被包含的脚本
+```
+#!/bin/bash
+
+url="http://www.google.com"
+```
+主脚本
+```
+#!/bin/bash
+
+. ./test1.sh                   #运行并得到变量url
+echo "google官网地址：$url"
+```
