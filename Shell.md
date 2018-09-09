@@ -697,12 +697,15 @@ $ command 2 > file
 将 stdout 和 stderr 合并后重定向到 file，可以这样写：
 ```
 $ command > file 2>&1      #2 表示标准错误文件(stderr)
-
+                           #&表示等同于的意思，2>&1，表示2的输出重定向等同于1                          
 或者
-
-$ command >> file 2>&1
+$ command >> file 2>&1     #这里>>与>没有区别
 ```
-
+区分
+```
+command> file 2>file       #file文件被打开两次写入，被2覆盖了
+command> file 2>&1         #文件打开一次，2追加到1后面
+```
 **Here Document**
 Here Document 是 Shell 中的一种特殊的重定向方式，用来将输入重定向到一个交互式 Shell 脚本或程序
 ```
