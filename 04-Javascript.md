@@ -77,6 +77,13 @@ if(isNaN(x)||x.replace(/(^\s*)|(\s*$)/g,"")==""){
 也可以外置 script
 ```
 <body>
-<script src="myScript.js"></script>
+<script src="myScript.js"></script>        #外部脚本不能包含 <script> 标签
 </body>
 ```
+
+#### JavaScript 输出
+##### 显示数据
+- window.alert() 弹出警告框。
+- document.write() 方法将内容写到 HTML 文档中。
+- innerHTML 写入到 HTML 元素。
+- console.log() 写入到浏览器的控制台
