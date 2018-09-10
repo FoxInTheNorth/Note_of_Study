@@ -1,4 +1,4 @@
-JavaScript 是一种轻量级的编程语言
+JavaScript 是一种轻量级的编程语言  
 ECMA-262 是 JavaScript 标准的官方名称
 
 ##### 直接写入 HTML 输出流
