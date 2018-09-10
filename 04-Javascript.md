@@ -71,3 +71,6 @@ if(isNaN(x)||x.replace(/(^\s*)|(\s*$)/g,"")==""){
 ```
 以前可能会写成 <script type="text/javascript"> 
 现在直接 <script> 就可以了。JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言
+
+##### 位置
+通常的做法是把函数放入 <head> 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容
