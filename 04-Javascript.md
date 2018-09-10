@@ -41,6 +41,17 @@ function changeImage()
 </script>
 <img id="myimage" onclick="changeImage()" src="/images/pic_bulboff.gif" width="100" height="180">
 ```
+更简洁的三目运算
+```
+<script>
+function changeImage(){
+	var s = document.getElementById('myimage');
+	s.src = s.src.match('bulboff')?"/images/pic_bulbon.gif":"/images/pic_bulboff.gif";
+}
+</script>
+<img id="myimage" onclick="changeImage()" src="/images/pic_bulboff.gif" width="100" height="180">
+
+```
 ##### 改变 HTML 样式
 ```
 x=document.getElementById("demo")  //找到元素 
@@ -58,3 +69,5 @@ if(isNaN(x)||x.replace(/(^\s*)|(\s*$)/g,"")==""){
     alert("不是数字");
 }
 ```
+以前可能会写成 <script type="text/javascript"> 
+现在直接 <script> 就可以了。JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言
