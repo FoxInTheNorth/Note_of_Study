@@ -84,6 +84,18 @@ if(isNaN(x)||x.replace(/(^\s*)|(\s*$)/g,"")==""){
 #### JavaScript 输出
 ##### 显示数据
 - window.alert() 弹出警告框。
-- document.write() 方法将内容写到 HTML 文档中。
+- document.write() 将内容写到 HTML 文档中。      #如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖
 - innerHTML 写入到 HTML 元素。
 - console.log() 写入到浏览器的控制台
+
+```
+window.alert(5 + 6)
+document.write("段落已修改")
+document.write(date())           #调用日期函数        
+document.getElementById("demo").innerHTML = "段落已修改。"
+
+a = 5;
+b = 6;
+c = a + b;
+console.log(c)
+```
