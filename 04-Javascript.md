@@ -148,15 +148,47 @@ function myFunction(a, b) {
 
 javascript字母大小写
 javaScript 使用 Unicode 字符集
+JavaScript 中，常见的是驼峰法的命名规则
 
+#### JavaScript 语句
+通常我们在每条可执行的语句结尾添加分号。
+```
+var y = x * 10;
+```
+使用分号的另一用处是在一行中编写多条语句。
+```
+var y = x * 10;var m 
+```
 
+##### 代码块
+代码块以左花括号开始，以右花括号结束。
+代码块的作用是一并地执行语句序列
+函数中常见
 
+##### 语句标识符
+JavaScript 语句通常以一个 语句标识符 为开始，并执行该语句
+```
+break	
+catch	语句块，在 try 语句块执行出错时执行 catch 语句块。
+continue	跳过循环中的一个迭代。
+do ... while	执行一个语句块，在条件语句为 true 时继续执行该语句块。
+for	在条件语句为 true 时，可以将代码块执行指定的次数。
+for ... in	
+function	定义一个函数
+if ... else	
+return	
+switch	用于基于不同的条件来执行不同的动作。
+throw	抛出（生成）错误 。
+try	实现错误处理，与 catch 一同使用。
+var	
+while	
+```
+##### 对代码行进行折行
+```
+document.write("你好 \
+世界!");
 
-
-
-
-
-
-
-
+document.write \       #但是这样不行
+("你好世界!");
+```
 
