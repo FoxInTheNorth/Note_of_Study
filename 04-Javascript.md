@@ -137,8 +137,6 @@ var y = x * 10;
 ```
 JavaScript 关键字必须以字母、下划线（_）或美元符（$）开始
 
-注释用//
-
 ##### 函数
 ```
 function myFunction(a, b) {
@@ -191,4 +189,15 @@ document.write("你好 \
 document.write \       #但是这样不行
 ("你好世界!");
 ```
+#### JavaScript 注释
+##### 多行注释
+以 /* 开始，以 */ 结尾。
 
+#### 应用注释符号验证浏览器是否支持 JavaScript 脚本功能
+```
+<script>
+<!--                                                    #HTML提供的注释符号进行验证,不支持javascrip的会被注释掉
+document.write("您的浏览器支持JavaScript脚本!");          #支持的会读取，用//避免 JavaScript 执行 --> 标签
+//-->
+</script>
+```
