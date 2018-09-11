@@ -110,8 +110,15 @@ console.log(c)
 - 数组（Array）字面量  定义一个数组
 - 对象（Object）字面量 定义一个对象（如json）
 - 函数（Function）字面量 定义一个函数
-
-#### 变量
+##### 数据类型
+```
+var length = 16;                                  // Number 通过数字字面量赋值 
+var points = x * 10;                              // Number 通过表达式字面量赋值
+var lastName = "Johnson";                         // String 通过字符串字面量赋值
+var cars = ["Saab", "Volvo", "BMW"];              // Array  通过数组字面量赋值
+var person = {firstName:"John", lastName:"Doe"};  // Object 通过对象字面量赋值
+```
+##### 变量
 ```
 var x, length    #使用关键字 var 来定义变量
 x = 5
@@ -119,4 +126,37 @@ length = 6
 ```
 在指令式语言中，变量通常是可变的。字面量是一个恒定的值
 
-#### 操作符
+##### 操作符
+- 赋值，算术和位运算符	=  +  -  *  /	在 JS 运算符中描述
+- 条件，比较及逻辑运算符	==  != <  > 	在 JS 比较运算符中描述
+
+##### 关键字与注释
+语句是用分号分隔
+```
+var y = x * 10;
+```
+JavaScript 关键字必须以字母、下划线（_）或美元符（$）开始
+
+注释用//
+
+##### 函数
+```
+function myFunction(a, b) {
+   	return a * b;                                // 返回 a 乘以 b 的结果
+}
+```
+
+javascript字母大小写
+javaScript 使用 Unicode 字符集
+
+
+
+
+
+
+
+
+
+
+
+
