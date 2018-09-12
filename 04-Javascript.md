@@ -337,3 +337,5 @@ var y=      new Boolean;
 var cars=   new Array;
 var person= new Object;
 ```
+#### JavaScript 对象
+键值对在 JavaScript 对象通常称为 对象属性
