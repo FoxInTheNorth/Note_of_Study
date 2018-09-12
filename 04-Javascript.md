@@ -228,7 +228,7 @@ var x,y,z=1;    #x,y 为 undefined， z 为 1
 var carname="Volvo"; 
 var carname;              #还是"Volvo"  
 ```
-#### let变量
+##### let变量
 let允许你声明一个作用域被限制在块级中的变量、语句或者表达式。在Function中局部变量推荐使用let变量，避免变量名冲突
 let 声明的变量只在其声明的块或子块中可用  
 var 声明的变量的作用域是整个封闭函数
@@ -252,7 +252,7 @@ function letTest() {
 }
 ```
 
-#### 变量作用域
+##### 变量作用域
 Javascript声明变量的时候，虽然用var关键字声明和不用关键字声明，很多时候运行并没有问题，但是这两种方式还是有区别的
 ```
 // num1为全局变量，num2为window的一个属性      #????????
@@ -271,3 +271,13 @@ num2 = 2;     // window的属性
     }())
 }
 ```
+#### JavaScript 数据类型
+字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）
+
+##### 动态类型
+相同的变量可用作不同的类型
+
+##### 字符串
+##### 数字
+只有一种数字类型。数字可以带小数点，也可以不带
+
