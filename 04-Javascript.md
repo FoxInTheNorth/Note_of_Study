@@ -296,3 +296,28 @@ var z=123e-5;     // 0.00123
 var x=true;
 var y=false;      #首字母小写，python首字母大写
 ```
+##### 数组
+```
+var cars=new Array();
+cars[0]="Saab";                
+cars[1]="Volvo";
+cars[2]="BMW";
+```
+或者(condensed array):
+```
+var cars=new Array("Saab","Volvo","BMW");
+```
+或者 (literal array):
+```
+var cars=["Saab","Volvo","BMW"];
+```
+##### 对象       
+对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔，有点像python dict
+```
+var person={firstname:"John", lastname:"Doe", id:5566};   #有三个属性
+```
+查找
+```
+name=person.lastname;        
+name=person["lastname"];
+```
