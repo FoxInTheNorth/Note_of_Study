@@ -311,7 +311,7 @@ var cars=new Array("Saab","Volvo","BMW");
 ```
 var cars=["Saab","Volvo","BMW"];
 ```
-##### 对象       
+##### java对象       
 对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔，有点像python dict
 ```
 var person={firstname:"John", lastname:"Doe", id:5566};   #有三个属性
@@ -320,4 +320,20 @@ var person={firstname:"John", lastname:"Doe", id:5566};   #有三个属性
 ```
 name=person.lastname;        
 name=person["lastname"];
+```
+
+##### Undefined 和 Null
+可以通过将变量的值设置为 null 来清空变量
+```
+cars=null;
+person=null;
+```
+##### 声明变量类型
+声明新变量时，可以使用关键词 "new" 来声明其类型
+```
+var carname=new String;
+var x=      new Number;
+var y=      new Boolean;
+var cars=   new Array;
+var person= new Object;
 ```
