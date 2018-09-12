@@ -339,3 +339,29 @@ var person= new Object;
 ```
 #### JavaScript 对象
 键值对在 JavaScript 对象通常称为 对象属性
+
+##### 访问对象属性
+两种方式访问对象属性
+```
+person.lastName;
+person["lastName"];
+```
+##### 对象方法
+对象方法通过添加 () 调用 (作为一个函数)
+```
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id : 5566,
+    fullName : function() 
+	{
+       return this.firstName + " " + this.lastName;
+    }
+};
+```
+对上述对象操作
+```
+name = person.fullName;     #结果：function() { return this.firstName + " " + this.lastName; }
+
+name = person.fullName();   #结果John Doe
+```
