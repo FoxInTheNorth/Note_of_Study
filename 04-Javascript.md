@@ -201,3 +201,73 @@ document.write("您的浏览器支持JavaScript脚本!");          #支持的会
 //-->
 </script>
 ```
+
+#### JavaScript 变量
+- 变量必须以字母开头
+- 变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）
+- 变量名称对大小写敏感（y 和 Y 是不同的变量）
+```
+var carname;  #声明一个变量，为空值undefined
+````
+一条语句，多个变量
+```
+var lastname="Doe", age=30, job="carpenter";
+```
+也可以分行
+```
+var lastname="Doe",
+age=30,
+job="carpenter";
+```
+但是这样不行
+```
+var x,y,z=1;    #x,y 为 undefined， z 为 1
+```
+重新声明变量不会丢失值
+```
+var carname="Volvo"; 
+var carname;              #还是"Volvo"  
+```
+#### let变量
+let允许你声明一个作用域被限制在块级中的变量、语句或者表达式。在Function中局部变量推荐使用let变量，避免变量名冲突
+let 声明的变量只在其声明的块或子块中可用  
+var 声明的变量的作用域是整个封闭函数
+```
+function varTest() {
+    var x = 1;
+    if (true) {
+        var x = 2;       // 同样的变量!
+        console.log(x);  // 2
+    }
+    console.log(x);  // 2
+}
+
+function letTest() {
+    let x = 1;
+    if (true) {
+        let x = 2;       // 不同的变量    
+        console.log(x);  // 2  
+    }
+    console.log(x);  // 1
+}
+```
+
+#### 变量作用域
+Javascript声明变量的时候，虽然用var关键字声明和不用关键字声明，很多时候运行并没有问题，但是这两种方式还是有区别的
+```
+// num1为全局变量，num2为window的一个属性      #????????
+var num1 = 1;
+num2 = 2;
+// delete num1;  无法删除
+// delete num2;  删除
+function model(){
+var num1 = 1; // 本地变量
+num2 = 2;     // window的属性
+    // 匿名函数
+    (function(){
+        var num = 1; // 本地变量
+        num1 = 2; // 继承作用域（闭包）
+        num3 = 3; // window的属性
+    }())
+}
+```
