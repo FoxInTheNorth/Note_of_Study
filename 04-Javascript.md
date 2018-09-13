@@ -407,6 +407,39 @@ function myFunction()
 函数调用将被返回值取代
 ```
 var myVar=myFunction();
+document.getElementById("demo").innerHTML=myFunction();
+```
+return退出函数
+```
+function myFunction(a,b)       
+{
+    if (a>b)       #如果 a 大于 b，则上面的代码将退出函数，并不会计算 a 和 b 的总和
+    {
+        return;
+    }
+    x=a+b
+}
 ```
 
+##### 向未声明的 JavaScript 变量分配值
+如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。 并不是windows
+```
+carname="Volvo";
+```
+非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。
+```
+var var1 = 1; // 不可配置全局属性
+var2 = 2; // 没有使用 var 声明，可配置全局属性
 
+console.log(this.var1); // 1
+console.log(window.var1); // 1
+
+delete var1; // false 无法删除
+console.log(var1); //1
+
+delete var2; 
+console.log(delete var2); // true
+console.log(var2); // 已经删除 报错变量未定义
+```
+##### JavaScript 变量的全局属性
+？？？？？
