@@ -365,3 +365,48 @@ name = person.fullName;     #结果：function() { return this.firstName + " " +
 
 name = person.fullName();   #结果John Doe
 ```
+#### JavaScript 函数
+函数就是包裹在花括号中的代码块，前面使用了关键词 function：
+```
+function functionname()
+{
+执行代码
+}
+```
+##### 传参
+您可以发送任意多的参数，由逗号 (,) 分隔：
+```
+myFunction(argument1,argument2)
+
+```
+声明函数时，请把参数作为变量来声明
+```
+function myFunction(var1,var2)
+{
+代码
+}
+```
+实例
+```
+<p>点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction('Harry Potter','Wizard')">点击这里</button>
+<script>
+function myFunction(name,job){
+    alert("Welcome " + name + ", the " + job);
+}
+</script>
+```
+##### 带有返回值的函数``
+```
+function myFunction()
+{
+    var x=5;
+    return x;
+}
+```
+函数调用将被返回值取代
+```
+var myVar=myFunction();
+```
+
+
