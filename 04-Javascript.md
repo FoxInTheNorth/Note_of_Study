@@ -483,6 +483,42 @@ function myFunction() {
 
 ##### HTML 中的全局变量  
 在 HTML 中, 全局变量是 window 对象: 所有数据变量都属于 window 对象
-
-全局变量，或者函数，可以覆盖 window 对象的变量或者函数。
+```
+全局变量，或者函数，可以覆盖 window 对象的变量或者函数  
 局部变量，包括 window 对象可以覆盖全局变量和函数
+```
+
+#### JavaScript 事件
+常见的HTML事件
+```
+onchange      HTML 元素改变
+onclick       用户点击 HTML 元素
+onmouseover   用户在一个HTML元素上移动鼠标
+onmouseout    用户从一个HTML元素上移开鼠标
+onkeydown     用户按下键盘按键
+onload        浏览器已完成页面的加载
+```
+
+HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 元素。 
+```
+<some-HTML-element some-event='JavaScript 代码'>
+<some-HTML-element some-event="JavaScript 代码">
+```
+```
+<button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button>       
+<button onclick="this.innerHTML=Date()">现在的时间是?</button>               #修改自身button元素显示的文字
+```
+
+#### JavaScript 字符串
+
+
+
+
+
+
+
+
+
+
+
+
