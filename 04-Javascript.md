@@ -443,3 +443,46 @@ console.log(var2); // 已经删除 报错变量未定义
 ```
 ##### JavaScript 变量的全局属性
 ？？？？？
+
+#### JavaScript 作用域
+作用域为可访问变量，对象，函数的集合  
+##### 局部作用域
+变量在函数内声明，变量为局部作用域
+```
+// 此处不能调用 carName 变量
+function myFunction() {
+    var carName = "Volvo";
+    // 函数内可调用 carName 变量
+}
+```
+因为局部变量只作用于函数内，所以不同的函数可以使用相同名称的变量
+
+##### 全局作用域
+全局变量有 全局作用域
+```
+var carName = " Volvo";
+// 此处可调用 carName 变量
+function myFunction() {
+    // 函数内可调用 carName 变量
+}
+```
+如果变量在函数内没有声明（没有使用 var 关键字），该变量为全局变量    
+
+```
+// 此处可调用 carName 变量
+ 
+function myFunction() {
+    carName = "Volvo";
+    // 此处可调用 carName 变量
+}
+```
+
+##### JavaScript 变量生命周期 
+局部变量在函数执行完毕后销毁   
+全局变量在页面关闭后销毁
+
+##### HTML 中的全局变量  
+在 HTML 中, 全局变量是 window 对象: 所有数据变量都属于 window 对象
+
+全局变量，或者函数，可以覆盖 window 对象的变量或者函数。
+局部变量，包括 window 对象可以覆盖全局变量和函数
