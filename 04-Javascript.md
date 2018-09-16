@@ -522,8 +522,15 @@ HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 
 \f	换页符
 ```
 
-
-
+##### 字符串可以是对象
+JavaScript 字符串是原始值，可以使用字符创建： var firstName = "John"   
+但我们也可以使用 new 关键字将字符串定义为一个对象： var firstName = new String("John")
+```
+var x = "John";
+var y = new String("John");
+typeof x // 返回 String
+typeof y // 返回 Object
+```
 
 
 
