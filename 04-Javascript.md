@@ -572,3 +572,54 @@ toUpperCase()	把字符串转换为大写
 trim()	移除字符串首尾空白
 valueOf()	返回某个字符串对象的原始值
 ```
+#### JavaScript 运算符
+##### 算术运算符
+y=5
+```
++	加法	   x=y+2	7	5	
+-	减法	   x=y-2	3	5	
+*	乘法	   x=y*2	10	5	
+/	除法	   x=y/2	2.5	5	
+%	取模（余数）	x=y%2	     1	     5	
+++	自增	   x=++y	6	6	 #++y先自增后赋值
+                     x=y++	  5	  6	   #y++先赋值后自增
+--	自减	   x=--y	4	4	
+                     x=y--	  5	  4
+```
+
+##### 赋值运算符
+x=10 和 y=5
+```
+=	x=y	 	x=5	 
++=	x+=y	x=x+y	x=15	 
+-=	x-=y	x=x-y	x=5	 
+*=	x*=y	x=x*y	x=50	 
+/=	x/=y	x=x/y	x=2	 
+%=	x%=y	x=x%y	x=0
+```
+
+##### 用于字符串的 + 运算符
+```
+txt1="What a very";
+txt2="nice day";
+txt3=txt1+txt2;             #What a verynice day
+```
+把空格插入一个字符串之中
+```
+txt1="What a very ";
+txt2="nice day";
+txt3=txt1+txt2;             #What a very nice day
+```
+把空格插入表达式中
+```
+txt1="What a very";
+txt2="nice day";
+txt3=txt1+" "+txt2;             #What a very nice day
+```
+##### 对字符串和数字进行加法运算
+如果把数字与字符串相加，结果将成为字符串！
+```
+x=5+5;
+y="5"+5;
+z="Hello"+5;
+```
