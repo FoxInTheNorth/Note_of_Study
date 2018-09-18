@@ -639,3 +639,40 @@ z="Hello"+5;
 voteable=(age<18)?"年龄太小":"年龄已达到";   #如果变量 age 中的值小于 18，则向变量 voteable 赋值 "年龄太小"，否则赋值 "年龄已达到"
 
 ```
+#### JavaScript if...Else 语句
+##### if 语句
+```
+if (time<20)
+{
+    x="Good day";
+}
+```
+
+##### if...else 语句
+```
+if (time<20)
+{
+    x="Good day";
+}
+else
+{
+    x="Good evening";
+}
+
+```
+
+##### if...else if...else 语句
+```
+if (time<10)
+{
+    document.write("<b>早上好</b>");
+}
+else if (time>=10 && time<16)
+{
+    document.write("<b>今天好</b>");
+}
+else
+{
+    document.write("<b>晚上好!</b>");
+}
+```
