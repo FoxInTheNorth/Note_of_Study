@@ -726,3 +726,11 @@ for (var i=0;i<cars.length;i++)
 - for/in - 循环遍历对象的属性
 - while - 当指定的条件为 true 时循环指定的代码块
 - do/while - 同样当指定的条件为 true 时循环指定的代码块
+
+**For 循环**
+```
+for (var i=0; i<5; i++)
+{
+      x=x + "该数字为 " + i + "<br>";
+}
+```
