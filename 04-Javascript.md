@@ -698,3 +698,5 @@ switch (d)
   break; 
 }
 ```
+##### default 关键词
+请使用 default 关键词来规定匹配不存在时做的事情
