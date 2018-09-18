@@ -698,5 +698,31 @@ switch (d)
   break; 
 }
 ```
+
 ##### default 关键词
 请使用 default 关键词来规定匹配不存在时做的事情
+```
+var d=new Date().getDay();
+switch (d)
+{
+    case 6:x="今天是星期六";
+    break;
+    case 0:x="今天是星期日";
+    break;
+    default:
+    x="期待周末";
+}
+document.getElementById("demo").innerHTML=x;b
+```
+#### JavaScript for 循环
+```
+for (var i=0;i<cars.length;i++)
+{ 
+    document.write(cars[i] + "<br>");
+}
+```
+##### 不同类型的循环
+- for - 循环代码块一定的次数
+- for/in - 循环遍历对象的属性
+- while - 当指定的条件为 true 时循环指定的代码块
+- do/while - 同样当指定的条件为 true 时循环指定的代码块
