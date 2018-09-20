@@ -775,3 +775,23 @@ while (i<5)
     i++;
 }
 ```
+##### do/while 循环
+```
+	var x="",i=0;
+	do{
+		x=x + "该数字为 " + i + "<br>";
+	    i++;
+	}
+	while (i<5)  
+```
+##### 比较 for 和 while
+```
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0;
+while (cars[i])
+{
+    document.write(cars[i] + "<br>");
+    i++;
+}
+```
+while 和 do/while 的区别 : do/while至少会执行一遍
