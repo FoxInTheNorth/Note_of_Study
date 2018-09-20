@@ -752,14 +752,26 @@ for (; i<len; )
     document.write(cars[i] + "<br>");
     i++;                     #但是通常内部有相应的代码
 }
+```
 ##### For/In 循环
 JavaScript for/in 语句循环遍历对象的属性
 ```
+var x;
+var txt="";
 var person={fname:"John",lname:"Doe",age:25}; 
- 
+
 for (x in person)  // x 为属性名
 {
     txt=txt + person[x];
 }
 ```
+
+#### JavaScript while 循环
+##### while
+```
+while (i<5)
+{
+    x=x + "The number is " + i + "<br>";
+    i++;
+}
 ```
