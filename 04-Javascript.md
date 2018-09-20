@@ -795,3 +795,24 @@ while (cars[i])
 }
 ```
 while 和 do/while 的区别 : do/while至少会执行一遍
+
+#### JavaScript Break 和 Continue 语句
+##### Break 语句
+```
+for (i=0;i<10;i++)
+{
+    if (i==3)
+    {
+        break;
+    }
+    x=x + "The number is " + i + "<br>";
+}
+```
+##### Continue 语句
+```
+for (i=0;i<=10;i++)
+{
+    if (i==3) continue;
+    x=x + "The number is " + i + "<br>";
+}
+```
