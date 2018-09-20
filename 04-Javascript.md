@@ -734,3 +734,32 @@ for (var i=0; i<5; i++)
       x=x + "该数字为 " + i + "<br>";
 }
 ```
+开始变量省略写法
+```
+var i=2,len=cars.length;      #循环体外部已经定义变量
+for (; i<len; i++)
+{ 
+    document.write(cars[i] + "<br>");
+}
+```
+循环条件省略，那么必须在循环内提供 break。否则循环就无法停下来
+
+变量的变化也可以省略
+```
+var i=0,len=cars.length;
+for (; i<len; )
+{ 
+    document.write(cars[i] + "<br>");
+    i++;                     #但是通常内部有相应的代码
+}
+##### For/In 循环
+JavaScript for/in 语句循环遍历对象的属性
+```
+var person={fname:"John",lname:"Doe",age:25}; 
+ 
+for (x in person)  // x 为属性名
+{
+    txt=txt + person[x];
+}
+```
+```
