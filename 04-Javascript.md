@@ -836,6 +836,54 @@ list:
 ```
 代码块: 基本上是｛｝大括号之间
 
+**默认标签的情况** 
+除了默认标签情况，其他时候必须要有名标签
+当 break 和 continue 同时用于循环时，没有加标签，此时默认标签为当前"循环"的代码块。
+当 break 用于 switch 时，默认标签为当前的 switch 代码块
+有名标签的情况 
+```
+cars=["BMW","Volvo","Saab","Ford"];
+list:
+{
+    document.write(cars[0] + "");
+    document.write(cars[1] + "");
+    document.write(cars[2] + "");
+    break list;
+    document.write(cars[3] + "");
+    document.write(cars[4] + "");
+    document.write(cars[5] + "");
+}
+```
+上述break list;会跳出list的代码块。如果将break换成continue会有惊喜，违反了明确中的第二点，因为list只是个普通代码块，而不是循环。除非list写成如下形式 list:
+```
+for(var i=0; i<10; ++i)
+{
+    continue list;
+}
+```
 
-
-
+有了标签，可以使用break和continue在多层循环的时候控制外层循环。
+例如下面：
+```
+outerloop:
+for (var i = 0; i < 10; i++)
+{
+    innerloop:
+    for (var j = 0; j < 10; j++)
+    {
+        if (j > 3)
+        {
+            break;
+        }
+        if (i == 2)
+        {
+            break innerloop;
+        }
+        if (i == 4)
+        {
+            break outerloop;
+        }
+        document.write("i=" + i + " j=" + j + "");
+    }
+}
+```
