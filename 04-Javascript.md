@@ -812,7 +812,7 @@ for (i=0;i<10;i++)
 ```
 for (i=0;i<=10;i++)
 {
-    if (i==3) continue;
+    if (i==3) continue;                            #该例子跳过了值 3
     x=x + "The number is " + i + "<br>";
 }
 ```
