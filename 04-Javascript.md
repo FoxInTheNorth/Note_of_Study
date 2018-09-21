@@ -980,3 +980,28 @@ toExponential()	把对象的值转换为指数计数法。
 toFixed()	把数字转换为字符串，结果的小数点后有指定位数的数字。
 toPrecision()	把数字格式化为指定的长度。
 ```
+##### 将布尔值转换为字符串
+全局方法 String() 可以将布尔值转换为字符串。
+```
+String(false)        // 返回 "false"
+String(true)         // 返回 "true"
+```
+Boolean 方法 toString() 也有相同的效果
+```
+false.toString()     // 返回 "false"
+true.toString()      // 返回 "true"
+```
+##### 将日期转换为字符串
+Date() 返回字符串
+```
+Date()      // 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)
+```
+全局方法 String() 可以将日期对象转换为字符串
+```
+String(new Date())      // 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)
+```
+Date 方法 toString() 也有相同的效果
+```
+obj = new Date()
+obj.toString()   // 返回 Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)--
+```
