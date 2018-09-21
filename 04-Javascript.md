@@ -887,3 +887,31 @@ for (var i = 0; i < 10; i++)
     }
 }
 ```
+
+#### JavaScript typeof、 null、undefined、valueOf()
+##### typeof 操作符
+检测变量的数据类型 
+```
+typeof "John"                // 返回 string 
+typeof 3.14                  // 返回 number
+typeof false                 // 返回 boolean
+typeof [1,2,3,4]             // 返回 object
+typeof {name:'John', age:34} // 返回 object
+```
+##### null
+null是一个只有一个值的特殊类型。表示一个空对象引用
+用 typeof 检测 null 返回是object
+你可以设置为 null 来清空对象
+```
+var person = null;           // 值为 null(空), 但类型为对象
+```
+你可以设置为 undefined 来清空对象
+```
+var person = undefined;     // 值为 undefined, 类型为 undefined
+```
+##### undefined 和 null 的区别
+null 和 undefined 的值相等，但类型不等
+typeof undefined             // undefined
+typeof null                  // object
+null === undefined           // false
+null == undefined            // true
