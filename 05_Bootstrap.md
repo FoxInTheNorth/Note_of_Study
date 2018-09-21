@@ -25,3 +25,12 @@ Bootstrap引用
 </body>
 </html>
 ```
+#### Bootstrap CSS 概览
+##### HTML 5 文档类型（Doctype）
+```
+<!DOCTYPE html>
+<html>
+....
+</html>
+```
+
