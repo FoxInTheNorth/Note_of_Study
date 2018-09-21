@@ -915,3 +915,68 @@ typeof undefined             // undefined
 typeof null                  // object
 null === undefined           // false
 null == undefined            // true
+
+#### JavaScript 类型转换
+Number() 转换为数字， String() 转换为字符串， Boolean() 转化为布尔值
+在 JavaScript 中有 5 种不同的数据类型：
+- string
+- number
+- boolean
+- object
+- function
+3 种对象类型：
+- Object
+- Date
+- Array
+2 个不包含任何值的数据类型：
+- null
+- undefined
+
+NaN 的数据类型是 number
+数组(Array)的数据类型是 object
+日期(Date)的数据类型为 object
+null 的数据类型是 object
+未定义变量的数据类型为 undefined
+
+如果对象是 JavaScript Array 或 JavaScript Date ，我们就无法通过 typeof 来判断他们的类型，因为都是 返回 Object。
+
+##### constructor 属性
+constructor 属性返回所有 JavaScript 变量的构造函数
+```
+"John".constructor                 // 返回函数 String()  { [native code] }
+(3.14).constructor                 // 返回函数 Number()  { [native code] }
+false.constructor                  // 返回函数 Boolean() { [native code] }
+[1,2,3,4].constructor              // 返回函数 Array()   { [native code] }
+{name:'John', age:34}.constructor  // 返回函数 Object()  { [native code] }
+new Date().constructor             // 返回函数 Date()    { [native code] }
+function () {}.constructor         // 返回函数 Function(){ [native code] }
+```
+你可以使用 constructor 属性来查看对象是否为数组 (包含字符串 "Array")或者是否为日期 (包含字符串 "Date"):
+```
+function isArray(myArray) {
+    return myArray.constructor.toString().indexOf("Array") > -1;
+}
+
+function isDate(myDate) {
+    return myDate.constructor.toString().indexOf("Date") > -1;       //？？？？
+}
+```
+##### JavaScript 类型转换
+全局方法 String() ，可用于任何类型的数字，字母，变量，表达式
+```
+String(x)         // 将变量 x 转换为字符串并返回
+String(123)       // 将数字 123 转换为字符串并返回
+String(100 + 23)  // 将数字表达式转换为字符串并返回
+```
+Number 方法 toString() 也是有同样的效果
+```
+x.toString()
+(123).toString()
+(100 + 23).toString()
+```
+Number 还包括的一些方法
+``` 
+toExponential()	把对象的值转换为指数计数法。
+toFixed()	把数字转换为字符串，结果的小数点后有指定位数的数字。
+toPrecision()	把数字格式化为指定的长度。
+```
