@@ -1113,9 +1113,32 @@ function(){}		NaN		"function(){}"	true
 null			0		"null"	false	 
 undefined		NaN		"undefined"	false
 ```
-注意，null NAN,0,""
+注意，null、undefined、 NAN、0、"" 的布尔值为false
+     false、"0"、"000"、""、[ ]、null 的数值为0，而{ }的数值为NAN
+     
+**检测数据类型：typeof 与 instanceof**
+typeof 
+typeof 用以获取一个变量或者表达式的类型，typeof 一般只能返回如下几个结果：
+```
+number,boolean,string,function（函数）,object（NULL,数组，对象）,undefined。
+```
+可以使用 typeof 来获取一个变量是否存在，如 if(typeof a!="undefined"){}，而不要去使用 if(a) 因为如果 a 不存在（未声明）则会出错。
 
+正因为 typeof 遇到 null,数组,对象时都会返回 object 类型，所以当我们要判断一个对象是否是数组时。或者判断某个变量是否是某个对象的实例则要选择使用另一个关键语法 instanceof
 
+可通过 instanceof 操作符来判断对象的具体类型，返回布尔值，如果是指定类型返回 true，否则返回 false
+```
+arr = [1,2,3];
+if(arr instanceof Array){
+    document.write("arr 是一个数组");
+} else {
+    document.write("arr 不是一个数组");
+}
+```
+
+**undefined 与 null 的区别**
+
+表面上 undefined 与 null 都是什么都没有的意思，但是实际上 undefined 是未定义（就是变量没有初始化），null 是一个变量初始化了，但是什么值都没给，只给了一个空对象；进一步说，undefined 与 null是值相等，类型不相等
 
 
 
