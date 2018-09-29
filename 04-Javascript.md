@@ -1141,10 +1141,21 @@ if(arr instanceof Array){
 表面上 undefined 与 null 都是什么都没有的意思，但是实际上 undefined 是未定义（就是变量没有初始化），null 是一个变量初始化了，但是什么值都没给，只给了一个空对象；进一步说，undefined 与 null是值相等，类型不相等
 
 
+#### JavaScript 正则表达式
+##### 语法
+```
+/正则表达式主体/修饰符(可选)
+var patt = /runoob/i
+```
+/runoob/i  是一个正则表达式。
+runoob  是一个正则表达式主体 (用于检索)。
+i  是一个修饰符 (搜索不区分大小写)
 
-
-
-
-
+##### 使用字符串方法
+在 JavaScript 中，正则表达式通常用于两个字符串方法 : search() 和 replace()
+```
+var str = "Visit Runoob!"; 
+var n = str.search(/Runoob/i);   返回匹配的起始位置6
+```
 
 
