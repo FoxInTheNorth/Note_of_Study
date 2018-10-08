@@ -1157,14 +1157,11 @@ i  是一个修饰符 (搜索不区分大小写)
 var str = "Visit Runoob!"; 
 var n = str.search(/Runoob/i);   返回匹配的起始位置6
 
-<button onclick="myFunction()">点我</button>
-<p id="demo">请访问 Microsoft!</p>
-<script>
-function myFunction() {
-    var str = document.getElementById("demo").innerHTML; 
-    var txt = str.replace(/microsoft/i,"Runoob");
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
+var str = document.getElementById("demo").innerHTML; 
+var txt = str.replace(/microsoft/i,"Runoob");
+
+var str = document.getElementById("demo").innerHTML; 
+var txt = str.replace("Microsoft","Runoob");
 
 ```
+##### 正则表达式修饰符
