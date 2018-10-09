@@ -1260,3 +1260,32 @@ function IsEmail(str) {
     return reg.test(str);                      //例如， ‘industr(?:y|ies) 就是一个比 ‘industry|industries’ 更简略的表达式
 }
 ```
+
+#### JavaScript 错误 - throw、try 和 catch
+```
+try {
+  //在这里运行代码
+} catch(err) {
+  //在这里处理错误
+}
+```
+throw 语句允许我们创建自定义错误
+如果把 throw 与 try 和 catch 一起使用，那么您能够控制程序流，并生成自定义的错误消息
+```
+function myFunction() {
+    var message, x;
+    message = document.getElementById("message");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try { 
+        if(x == "")  throw "值为空";
+        if(isNaN(x)) throw "不是数字";
+        x = Number(x);
+        if(x < 5)    throw "太小";
+        if(x > 10)   throw "太大";
+    }
+    catch(err) {
+        message.innerHTML = "错误: " + err;
+    }
+}
+```
