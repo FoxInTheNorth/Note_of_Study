@@ -1189,4 +1189,74 @@ n+	匹配任何包含至少一个 n 的字符串。
 n*	匹配任何包含零个或多个 n 的字符串。
 n?	匹配任何包含零个或一个 n 的字符串。
 ```
-**正则表达式模式**
+**使用 RegExp 对象**
+RegExp 对象是一个预定义了属性和方法的正则表达式对象
+
+##### 使用 test()
+test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false
+```
+var patt1=new RegExp("e");     //规则用于搜索字符串中的字符 "e"
+document.write(patt1.test("The best things in life are free"));   //返回true
+
+var patt = /e/;                //规则用于搜索字符串中的字符 "e"  
+patt.test("The best things in life are free!");   
+
+/e/.test("The best things in life are free!")   //合并为一串，不用设置正则表达式的变量
+```
+##### 使用 exec()
+exec() 方法用于检索字符串中的正则表达式的匹配，该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。
+```
+/e/.exec("The best things in life are free!");    //返回的是 e
+```
+
+**判断输入是否为数字、字母、下划线组成**
+```
+function isValid(str) { return /^\w+$/.test(str); }         //定义了一个函数，直接返回一个RegExp对象的调用结果
+str = "1234abd__"
+document.write(isValid(str));
+document.write("<br>");
+
+str2 = "$32343#"
+document.write(isValid(str2));
+document.write("<br>");
+```
+
+**判断字符串是否全部为字母**
+```
+val = "123456"
+var isletter = /^[a-zA-Z]+$/.test(val);
+document.write(isletter);
+document.write("<br>");
+
+val2 = "asaaa"
+var isletter2 = /^[a-zA-Z]+$/.test(val2);
+document.write(isletter2);
+```
+**正则表达式表单验证实例**
+```
+/*是否带有小数*/
+function    isDecimal(strValue )  {  
+   var  objRegExp= /^\d+\.\d+$/;
+   return  objRegExp.test(strValue);  
+}  
+/*校验是否中文名称组成 */
+function ischina(str) {
+    var reg=/^[\u4E00-\u9FA5]{2,4}$/;   /*定义验证表达式*/
+    return reg.test(str);     /*进行验证*/
+}
+/*校验是否全由8位数字组成 */
+function isStudentNo(str) {
+    var reg=/^[0-9]{8}$/;   /*定义验证表达式*/
+    return reg.test(str);     /*进行验证*/
+}
+/*校验电话码格式 */
+function isTelCode(str) {
+    var reg= /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+    return reg.test(str);
+}
+/*校验邮件地址是否合法 */
+function IsEmail(str) {
+    var reg=/^\w+@[a-zA-Z0-9]{2,10}(?:\.[a-z]{2,4}){1,3}$/;        //  (?:) 匹配组, ?:用於标记该匹配组不应被捕获
+    return reg.test(str);                      //例如， ‘industr(?:y|ies) 就是一个比 ‘industry|industries’ 更简略的表达式
+}
+```
