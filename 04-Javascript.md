@@ -1289,3 +1289,19 @@ function myFunction() {
     }
 }
 ```
+**设置断点**
+**debugger 关键字**
+
+#### JavaScript 变量提升
+JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。
+JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明
+```
+x = 5; // 变量 x 设置为 5
+
+elem = document.getElementById("demo"); // 查找元素 
+elem.innerHTML = x;                     // 在元素中显示 x
+
+var x; // 声明 x
+```
+
+##### JavaScript 初始化不会提升
