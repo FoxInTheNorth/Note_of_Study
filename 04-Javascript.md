@@ -1292,7 +1292,7 @@ function myFunction() {
 **设置断点**
 **debugger 关键字**
 
-#### JavaScript 变量提升
+#### JavaScript 变量提升/函数提升
 JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。
 JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明
 ```
@@ -1305,3 +1305,45 @@ var x; // 声明 x
 ```
 
 ##### JavaScript 初始化不会提升
+##### 理解 js 的解析机制
+遇到 script 标签的话 js 就进行预解析，将变量 var 和 function 声明提升
+```
+a=5;
+show();
+var a;
+function show(){};
+```
+预解析
+```
+function show(){};
+var a;
+a=5;
+show();
+```
+声明匿名函数，使用匿名函数的方式不存在函数提升，因为函数名称使用变量表示的，只存在变量提升
+```
+var getName=function(){
+  console.log(2);
+}
+
+function getName(){
+  console.log(1);
+}
+
+getName();
+//结果为2
+```
+虽然函数声明和变量声明都会被提升，但是函数会首先被提升，然后才是变量
+```
+//函数、变量声明提升后
+function getName(){    //函数声明提升到顶部
+  console.log(1);
+}
+
+var getName;    //变量声明提升
+getName = function(){    //变量赋值依然保留在原来的位置
+  console.log(2);
+}
+
+getName();    // 最终输出：2
+```
